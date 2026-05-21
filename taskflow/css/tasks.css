@@ -1,0 +1,251 @@
+/* Task Sections */
+.task-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-header i {
+    color: var(--accent);
+}
+
+/* Tasks Grid */
+.tasks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Task Card */
+.task-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.task-card:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow);
+}
+
+.task-card.completed {
+    background: var(--complete-bg);
+    border-color: var(--complete-border);
+    opacity: 0.8;
+}
+
+/* Priority Colors */
+.task-card[data-priority="high"] {
+    border-left: 3px solid #ef4444;
+}
+
+.task-card[data-priority="medium"] {
+    border-left: 3px solid #f59e0b;
+}
+
+.task-card[data-priority="low"] {
+    border-left: 3px solid #10b981;
+}
+
+/* Task Left Section */
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+/* Task Content */
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+}
+
+.task-date i,
+.task-category i,
+.task-priority i {
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+/* Task Actions */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.edit-btn {
+    background: var(--accent);
+    color: white;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(0.95);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px dashed var(--border);
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+/* Priority Styles */
+.priority-high {
+    color: #ef4444;
+}
+
+.priority-medium {
+    color: #f59e0b;
+}
+
+.priority-low {
+    color: #10b981;
+}
+
+/* Overdue Date */
+.task-date.overdue {
+    color: #ef4444;
+}
+
+.task-date.overdue i {
+    color: #ef4444;
+}
+
+/* Task Meta Icons */
+.task-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.task-date i,
+.task-category i,
+.task-priority i {
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+.task-category i {
+    color: var(--accent);
+}
+/* Drag & Drop Styles */
+.task-card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.task-card.drag-over {
+    border: 2px dashed var(--accent);
+    background: var(--bg-primary);
+    transform: scale(1.01);
+}
+
+.task-card {
+    cursor: grab;
+    user-select: none;
+}
+
+.task-card:active {
+    cursor: grabbing;
+}
+
+/* Drag handle indicator */
+.task-drag-handle {
+    cursor: grab;
+    color: var(--text-secondary);
+    margin-right: 8px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.task-card:hover .task-drag-handle {
+    opacity: 1;
+}
+
+.task-card:active .task-drag-handle {
+    cursor: grabbing;
+}

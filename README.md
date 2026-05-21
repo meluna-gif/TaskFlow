@@ -12,5 +12,5 @@ A full-featured task management web application with:
 • Mobile-friendly sidebar navigation
 
 Tech Stack: HTML5, CSS3, JavaScript (Vanilla), Chart.js, Font Awesome Icons
-Live Demo: https://[username].github.io/taskflow/
-GitHub: https://github.com/[username]/taskflow
+Live Demo: https://meluna-gif.github.io/taskflow/
+GitHub: https://github.com/meluna-gif/taskflow

@@ -1,0 +1,18 @@
+/* Dark Theme */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --sidebar-bg: #0a0a0a;
+    --sidebar-text: #b0b0b0;
+    --sidebar-hover: #1f1f1f;
+    --card-bg: #1e1e1e;
+    --text-primary: #e5e5e5;
+    --text-secondary: #9ca3af;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border: #2d2d2d;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    --complete-bg: #1a2d1a;
+    --complete-border: #2d4a2d;
+}
